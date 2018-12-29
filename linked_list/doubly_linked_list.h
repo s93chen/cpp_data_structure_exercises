@@ -31,7 +31,6 @@ private:
         T data;
         Node *next;
         Node *prev;
-        Node(): next(nullptr), prev(nullptr) { }    
         Node(const T &d) : data(d), next(nullptr), prev(nullptr) { }
     };
     
@@ -55,7 +54,8 @@ DoublyLinkedList<T>::DoublyLinkedList():
 template <typename T>
 DoublyLinkedList<T>::~DoublyLinkedList() 
 {
-    cout << "destructor called" << endl;    
+    while (size)
+        popFront();
 }
 
 template <typename T>
