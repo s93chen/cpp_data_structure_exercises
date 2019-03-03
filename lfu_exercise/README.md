@@ -1,5 +1,7 @@
 ## Feed the Hungry Brothers!
 
+BIG THANK YOU to [@j84guo](https://github.com/j84guo) for coming up with this adorable question!
+
 ### Setup
 There was once a group of brothers named Udon, Bun, Xiao Xiong, Toaster and Dou
 Bao. The brothers worked as fire fighters and spent all day saving people from
@@ -35,7 +37,7 @@ a reasonably good caching algorithm as it ensures that frequently used "things"
 are kept in the cache for fast access.
 
 ### Task:
-Your task is to write a program which reads integers from stdin, where each
+Write a program which reads integers from stdin, where each
 integers represents a request for a particular "dish". You have an array of
 size 5 in memory which represents your "table". For every dish request, if
 <b>(1)</b> the dish alread exists on the table, you can considered the request
@@ -47,3 +49,11 @@ replacing it with the requested dish.
 For any given set of inputs, your program should return the number of times the
 assistant had to swap a dish off the table and replace it with a new one (i.e.
 cache misses).
+
+### To run:
+
+```
+g++ -o lfu_exercise -std=c++11 -Wall lfu_exercise.cpp
+
+./lfu_exercise < test1.txt
+```
